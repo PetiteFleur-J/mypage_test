@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--괄호 바깥 주석처리는 이런 식으로 하거나 단축키 ctrl+/ , 괄호 안에서 주석은 /* */사용 -->
+<!-- head부분은 창 열었을 때 탭관련 내용들 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    #title같은 것으로 역할과 명칭(이름표)을 부여해줘야 customizing도 가능-->
+    <title>2023년 버킷리스트</title>
+    <!-- .title내 padding=여백주기;입력 순서대로 위아래px 양옆px
+    border-radius=모서리 둥글기
+    -->
+    <!-- .bg내 width: 넓이, -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap');
+        * {/*코딩에서 *은 대부분의 경우 전체 다~라는 의미임*/
+	font-family: 'Hahmlet', serif;
+        }
+        .title  {
+            color: white;/* 글자 색을 바꾸는 명령어 */
+            background-color: rgb(181, 180, 250); /* 구역의 배경색을 바꾸는 명령어 */
+            font-size: 24px;
+            padding: 4px 14px;/* 배경에 안쪽 여백을 주는 명령어 */
+            border-radius: 8px;/* 배경의 테두리를 둥글게 만드는 명령어 */
+        }
+        .bg     {
+            width: 360px; 
+            background-image : url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
+
+        }
+        .msg    {
+            font-weight: bold;/* 글자를 굵게 만들어주는 font-weight */
+        }
+        .bucket {
+            width: 160px;
+            height: 160px;   
+        }
+        .img1   {
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .img2   {
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
+</head>
+<!--#body는 몸통/뼈대부분, 
+#h1은 내용에서 제목 같은 부분, p는 문장, div는 박스만들기, class의 msg=message, row=한 줄로 묶는다, bg=background
+#class의 bucket img~는 bucket이란 이름표와 img~라는 이름표 2개가 있는 것
+#shift+alt+f=선택부분 들여쓰기-->
+<!--bg center=는 내용들을 center로 오게 설정함, flex-row wrap은 같은 이름 가진 애들끼리 묶어 정렬 -->
+<body class="bg center"> 
+    <h1 class="title">2023 신년계획</h1>
+    <p class="msg">올해도 화이팅이다!</p>
+    <!--만약, 하나 달성했다? 그러면 class="bucket img1/2 center done"입력하면 르탄 도장 찍기 가능 -->
+    <!--가져다쓴거에서 이미지나 이런것 수정하고 싶으면, class의 이름명을 다른 걸로 바꾸면됨
+    예를 들어 수정전에는 img1이었는데 수정후에는 아래처럼 img1-t2
+-->
+    <div class="row flex-row wrap">
+        <div class="bucket img1-t2 center">논문 1개 쓰기</div>
+        <div class="bucket img2-t2 center">논문 1개 쓰기</div>
+        <div class="bucket img2-t2 center">논문 1개 쓰기</div>
+        <div class="bucket img1-t2 center">박사논문 구상 및 초고작성</div>
+        <div class="bucket img1-t2 center">꾸준히 운동하기</div>
+        <div class="bucket img2-t2 center">50kg이하로 건강 유지</div>
+    </div>
+</body>
+
+</html>
+
